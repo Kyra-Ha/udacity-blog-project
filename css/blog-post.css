@@ -1,7 +1,7 @@
 .container{
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 1fr;
+	grid-auto-rows: minamax(150px, auto);
 	grid-template-areas: 
 	"nav"
 	"hd"
@@ -37,6 +37,16 @@ nav{
 	font-size: 3em;
 	font-family: Montserrat;
 }
+nav a{
+	margin-right: 16px;
+
+}
+nav input[type=text]{
+  padding: 6px;
+  border: none;
+  margin-right: 16px;
+  font-size: 17px;
+}
 .sidebar{
 	grid-area: sd;
 	text-align:center;
@@ -71,7 +81,6 @@ nav{
 	background-color: #fffff2;
 	padding-left: 30px;
 	padding-right: 30px;
-	border: solid #000000;
 	border-radius: 10px;
 	padding-bottom: 20px;
 	margin-left: 30px;
@@ -80,7 +89,14 @@ nav{
 	height:50%;
 	width:50%;
 }
-p{
+.card{
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  	transition: 0.3s;
+}
+.card:hover {
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.card p{
 	font-family:Roboto Mono;
 	justify-content: center;
 	font-size: 1em;
@@ -89,7 +105,8 @@ p{
 .footer{
 	grid-area: ft;
 	text-align:center;
-	padding-top:50px;	
+	padding-top:20px;
+	padding-bottom: 10px;
 }
 
 
