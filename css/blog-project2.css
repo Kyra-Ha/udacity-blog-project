@@ -47,7 +47,7 @@ nav input[type=text]{
   margin-right: 16px;
   font-size: 17px;
 }
-.
+
 .blogposts{
 	margin: 20%;
 	vertical-align: center;
@@ -111,12 +111,12 @@ button:hover{
 		grid-template-rows: .05fr 1fr .2fr;
 		grid-gap: 1rem;
 		grid-template-areas: 
-		"hd nav"
+		"hd hd"
 		"main main"
 		"ft ft";
 		}
 	nav{
-		grid-area:nav;
+		grid-area:hd;
 		text-align: right;
 		font-size: 1.5em;
 		background: none;
@@ -131,13 +131,10 @@ button:hover{
 		border: solid #000000;
 		grid-area:hd;
 		z-index: 0;
-		
-
 	}
 	.title{
 		font-size:1.5em;
 		text-align: left;
-
 	}
 	.blogposts{
 		display: flex;
@@ -154,13 +151,8 @@ button:hover{
 		display: flex;
 		flex-direction:row;
 		flex-wrap: wrap;
-
 	}
-
-
 	.blogposts p{
-		
 		font-family:Roboto Mono;
 	}
 	
-}
