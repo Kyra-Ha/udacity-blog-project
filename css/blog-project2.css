@@ -21,7 +21,6 @@ body{
 	font-size: 2em;
 	text-align:center;
 	height:100%;
-	grid-area: hd;
 	border: none;
 }
 nav a{
@@ -47,42 +46,46 @@ nav input[type=text]{
   margin-right: 16px;
   font-size: 17px;
 }
+.top{
+	margin-top: 20px;
+	display: flex;
+	justify-content: space-between;
+	margin-left: 50px;
+	margin-right:70px;
+}
 
 .blogposts{
-	margin: 20%;
+	margin: 30px;
 	vertical-align: center;
 	grid-area:main;
 }
-.blogposts article{
-	
-	flex-direction: column;
-	color:#808000;
-	padding-left: 20px;
-	padding-right:20px;
-	padding-top: 10px;
-	background-color: #fffff2;
-	font-family: Montserrat;
-	text-align: center;
-	margin:20px;
-}
+
 .blogposts img{
-	width:100%;
-	height:100%;
-	text-align: center;
-	
+	max-width: 100%;
+	text-align: center;	
 }
-.about .avatar{
-	border-radius: 700px;
-	border: 5px solid #ffffff;
-	vertical-align: middle;
-	width:20%;
+.content figcaption{
+	font-weight: normal;
+	font-size: small;
+}
+.about img{
+	border-radius: 600px;
+	border: 5px solid #ffffff; 
 	height:20%;
+	text-align: center;
 }
 .card{
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   	transition: 0.3s;
-  	flex-wrap:wrap;
-  	border-radius: 10px;
+	text-align: center;
+	font-family: Montserrat;
+	background-color: #fffff2;
+	padding-left: 30px;
+	padding-right: 30px;
+	border-radius: 10px;
+	padding-bottom: 20px;
+	margin: 30px;
+	
 }
 .card:hover {
 	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -108,51 +111,41 @@ button:hover{
 	.container{
 		display: grid;
 		grid-template-columns: 1fr;
-		grid-template-rows: .05fr 1fr .2fr;
-		grid-gap: 1rem;
+		grid-template-rows: auto;
 		grid-template-areas: 
-		"hd hd"
-		"main main"
-		"ft ft";
+		"hd"
+		"main"
+		"ft";
+		border-bottom: solid #000000;
+		vertical-align: center;
 		}
 	nav{
 		grid-area:hd;
 		text-align: right;
+		position: relative;
 		font-size: 1.5em;
 		background: none;
-		padding-top: 30px;
-		position:relative;
-		z-index:1;
+		padding-top: 25px;
+	}
+	nav input{
+		display:inline-block;
 	}
 	header{
-		top: 0;
-		padding-left: 20px;
-		margin-bottom:5px;
-		border: solid #000000;
 		grid-area:hd;
-		z-index: 0;
+		padding-top: 0;
+		padding-left: 20px;
+		margin-bottom:50px;
 	}
 	.title{
-		font-size:1.5em;
-		text-align: left;
+		font-size: 30px;
+		text-align:left;
 	}
 	.blogposts{
+		grid-area: main;
 		display: flex;
-		flex-direction:row;
-		justify-content:flex-start | flex-end;
-		flex-wrap: wrap;
-		
-	}
-	.blogposts article{
-		overflow: hidden;
-	}
-	.card{
-		grid-area:main;
-		display: flex;
-		flex-direction:row;
-		flex-wrap: wrap;
+		flex-direction:column;
 	}
 	.blogposts p{
 		font-family:Roboto Mono;
 	}
-	
+}
